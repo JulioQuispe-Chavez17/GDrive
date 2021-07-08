@@ -1,0 +1,27 @@
+cloud:
+  aws:
+    credentials:
+      access-key: b8ae0ebe3294d746ec611a5a4da6cf062797dbfa
+      secret-key: BToHoX0YSFBICnD69tAOZhwReUnEhGmBO5JU7uzeFH4=
+    region:
+      static: sa-saopaulo-1
+    endpoint:
+      static: grc6enubk9os.compat.objectstorage.sa-saopaulo-1.oraclecloud.com
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: my_bucket
+
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+server:
+  port: 9090
