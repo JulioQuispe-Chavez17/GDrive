@@ -35,10 +35,15 @@ public class StorageController {
         return new ResponseEntity<>(service.listObject(), HttpStatus.OK);
     }
 
-    // TODO: fix must provide a directory to upload
+
     @PostMapping("/createDir")
     public ResponseEntity<String> uploadFile(@RequestParam(value = "dir_path") String directory) {
         return new ResponseEntity<>(service.createFolder(directory), HttpStatus.OK);
+    }
+     // TODO: fix must provide a directory to upload
+    @PostMapping("/uploadDir")
+    public ResponseEntity<String> uploadFolder(@RequestParam(value = "dir_path") String directory) {
+          return new ResponseEntity<>(service.uploadDir(directory), HttpStatus.OK);
     }
 
     @PostMapping("/upload")
