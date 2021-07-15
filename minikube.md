@@ -26,8 +26,8 @@ Nota: Minikube requiere un mínimo de 2 vCPU y 4GB RAM.
 
 ## 2. Instalar Docker
 
-`sudo apt-get update && \
-    sudo apt-get install docker.io -y`
+```sudo apt-get update && \
+    sudo apt-get install docker.io -y```
 	 Minikube requiere Docker.
 
 ## 3. Instalar Minikube
