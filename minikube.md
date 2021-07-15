@@ -28,15 +28,16 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 
-```sudo apt-get install conntrack
+```
+sudo apt-get install conntrack
 ```
 
 ## 2. Instalar Docker
 
-```sudo apt-get update && \
-    sudo apt-get install docker.io -y
 ```
-	 Minikube requiere Docker.
+sudo apt-get update && sudo apt-get install docker.io -y
+```
+Minikube requiere Docker.
 
 ## 3. Instalar Minikube
 
