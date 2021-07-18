@@ -177,3 +177,9 @@ Comandos en caso de usar el objeto Secret de Kubernetes debes encrytar la inform
 - echo -n "cm9vdA==" | base64
 
 Tips: Puedes usar el archivo makefile, ya tiene los comandos para iniciar el servicio
+
+Necesitamos instalar helm para lo demás:
+https://www.youtube.com/watch?v=eRWIJGF3Y2g&ab_channel=ThatDevOpsGuy
+sonarqube
+https://medium.com/@akamenev/running-sonarqube-on-azure-kubernetes-92a1b9051120
+ kubectl delete -f sonarqube/

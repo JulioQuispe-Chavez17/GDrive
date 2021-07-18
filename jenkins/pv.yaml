@@ -1,15 +1,14 @@
-kind: PersistentVolume
 apiVersion: v1
+kind: PersistentVolume
 metadata:
-  name: postgres-pv-volume
+  name: jenkins
   labels:
     type: local
-    app: postgres
 spec:
   storageClassName: manual
   capacity:
-    storage: 5Gi
+    storage: 4Gi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   hostPath:
     path: "/mnt/data"

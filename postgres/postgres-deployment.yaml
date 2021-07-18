@@ -4,8 +4,8 @@ metadata:
   name: postgres
 spec:
   selector:
-   matchLabels:
-    app: postgres
+    matchLabels:
+      app: postgres
   replicas: 1
   template:
     metadata:
@@ -16,9 +16,19 @@ spec:
         - name: postgres
           image: postgres:12-alpine
           imagePullPolicy: "IfNotPresent"
-          envFrom:
-            - configMapRef:
-                name: postgres-config
+          ports:
+            - containerPort: 5432
+          env:
+           - name: POSTGRES_USER
+             valueFrom:
+               secretKeyRef:
+                 name: postgres-secrets
+                 key: username
+           - name: POSTGRES_PASSWORD
+             valueFrom:
+               secretKeyRef:
+                 name: postgres-secrets
+                 key: password
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               name: postgredb
