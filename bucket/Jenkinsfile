@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    triggers {
+        pollSCM('* * * * *')
+    }
+    stages {
+        stage("Compile") {
+            steps {
+                sh "./gradlew compileJava"
+            }
+        }
+        stage("Unit test") {
+            steps {
+                sh "./mvnw test"
+            }
+        }
+
+        stage('SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('SonarQubePruebas') {
+                    sh './gradlew sonarqube'
+                }
+            }
+        }
+    }
+}

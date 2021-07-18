@@ -40,7 +40,7 @@ public class StorageController {
     public ResponseEntity<String> uploadFile(@RequestParam(value = "dir_path") String directory) {
         return new ResponseEntity<>(service.createFolder(directory), HttpStatus.OK);
     }
-     // TODO: fix must provide a directory to upload
+     // TODO: fix root caused problem, no remote
     @PostMapping("/uploadDir")
     public ResponseEntity<String> uploadFolder(@RequestParam(value = "dir_path") String directory) {
           return new ResponseEntity<>(service.uploadDir(directory), HttpStatus.OK);
