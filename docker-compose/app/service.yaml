@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: drive-service
+  labels:
+    app: drive
+spec:
+  type: NodePort
+  ports:
+    - name: ui
+      port: 9090
+      targetPort: 9090
+      nodePort: 31010
+      protocol: TCP
+  selector:
+    app: drive
