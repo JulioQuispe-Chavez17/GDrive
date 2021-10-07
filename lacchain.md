@@ -1,4 +1,4 @@
-# Minikube in AWS EC2 (Ubuntu)
+# Docker in Oracle (Ubuntu)
 ------------
 A continuación se muestran los pasos, que he seguido para ayudarme a ejecutar Minikube en la instancia EC2.
 
@@ -12,7 +12,7 @@ A continuación se muestran los pasos, que he seguido para ayudarme a ejecutar M
 | Par de claves | Cree su propio par de claves. |
 
 Ir al readme de docker y docker-compose
-Nota: Docker requiere un mínimo de 2 vCPU y 4GB RAM. 
+Nota: Docker requiere un mínimo de 2 vCPU y 4GB RAM. Instalar Metamask in browser
 
 
 ## 1. Instalar JQ
@@ -20,8 +20,9 @@ Is a lightweight and flexible command-line JSON processor.
 ```
 sudo apt-get install jq
 ```
-## 2. Instalar Metamask in browser
 ## 3. Implementar contenedores de Lacchain
 ```
 https://github.com/lacchain/lacchain-docker
 ```
+## 4. Necesitas recursos
+Puedes revisar las ramas y existen implmentaciones de como interactuar con el storage de Oracle.
